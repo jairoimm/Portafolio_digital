@@ -3,26 +3,6 @@ import useReveal from '../hooks/useReveal';
 
 const PROJECTS = [
   {
-    icon: '🍔',
-    name: 'Buen Apetito — ERP con Tienda Online',
-    status: 'dev', // 'live' | 'dev' | 'done'
-    statusLabel: 'EN DESARROLLO',
-    problem:
-      'Los negocios gastronómicos pequeños gestionan inventario, ventas y pedidos por separado, sin control de stock en tiempo real ni forma de vender online.',
-    solution:
-      'Sistema ERP con Django REST Framework (backend) y React (frontend): panel multi-rol para el negocio y tienda online pública para clientes, con pagos integrados.',
-    bullets: [
-      'Permisos por rol (dueño, administrador, cajero, cocinero) con clases de permisos personalizadas en DRF',
-      'Control de inventario con reserva de stock para evitar sobreventa en pedidos simultáneos',
-      'Integración de pasarela de pago Webpay Plus (Transbank): flujo pedido → pago → confirmación con manejo de idempotencia',
-      'Menú público y pedidos como invitado, sin necesidad de cuenta',
-      'Suite de tests automatizados (Django TestCase) cubriendo la lógica crítica de negocio',
-    ],
-    tags: ['Python', 'Django REST Framework', 'React', 'PostgreSQL', 'Webpay/Transbank'],
-    github: 'https://github.com/jairoimm/buen_apetito_main', // TODO: reemplazar con el link directo al repo
-    demo: null,
-  },
-  {
     icon: '📊',
     name: 'ETL Clima + IA + Power BI',
     status: 'dev', // 'live' | 'dev' | 'done'
@@ -39,7 +19,27 @@ const PROJECTS = [
       'Integración analítica lista para Power BI mediante vistas dedicadas y conexión a base de datos relacional',
     ],
     tags: ['Python', 'Pandas', 'PostgreSQL', 'Docker', 'Docker Compose', 'Power BI', 'Metabase', 'AI/Groq'],
-    github: 'https://github.com/jairoimm/Data-Analytics', // TODO: actualizar con el link exacto si difiere
+    github: 'https://github.com/jairoimm/etl-clima-ia', // TODO: actualizar con el link exacto si difiere
+    demo: null,
+  },
+  {
+    icon: '🍔',
+    name: 'Buen Apetito — ERP con Tienda Online',
+    status: 'dev', // 'live' | 'dev' | 'done'
+    statusLabel: 'EN DESARROLLO',
+    problem:
+      'Los negocios gastronómicos pequeños gestionan inventario, ventas y pedidos por separado, sin control de stock en tiempo real ni forma de vender online.',
+    solution:
+      'Sistema ERP con Django REST Framework (backend) y React (frontend): panel multi-rol para el negocio y tienda online pública para clientes, con pagos integrados.',
+    bullets: [
+      'Permisos por rol (dueño, administrador, cajero, cocinero) con clases de permisos personalizadas en DRF',
+      'Control de inventario con reserva de stock para evitar sobreventa en pedidos simultáneos',
+      'Integración de pasarela de pago Webpay Plus (Transbank): flujo pedido → pago → confirmación con manejo de idempotencia',
+      'Menú público y pedidos como invitado, sin necesidad de cuenta',
+      'Suite de tests automatizados (Django TestCase) cubriendo la lógica crítica de negocio',
+    ],
+    tags: ['Python', 'Django REST Framework', 'React', 'PostgreSQL', 'Webpay/Transbank'],
+    github: 'https://github.com/jairoimm/buen_apetito_main',
     demo: null,
   },
   {
@@ -57,7 +57,7 @@ const PROJECTS = [
       'Variables de entorno (python-dotenv) para separar credenciales de la lógica de la app',
     ],
     tags: ['Python', 'Django', 'PostgreSQL', 'psycopg2'],
-    github: 'https://github.com/jairoimm/arriendos', // TODO: reemplazar con el link directo al repo
+    github: 'https://github.com/jairoimm/arriendos',
     demo: null,
   },
   {
@@ -75,7 +75,7 @@ const PROJECTS = [
       'Interfaz responsiva adaptada a distintos dispositivos',
     ],
     tags: ['Python', 'API REST', 'Bootstrap 5'],
-    github: 'https://github.com/jairoimm/Aves_Chile', // TODO: reemplazar con el link directo al repo
+    github: 'https://github.com/jairoimm/Aves_Chile',
     demo: null,
   },
   {
@@ -93,7 +93,7 @@ const PROJECTS = [
       'Interfaz responsiva con Bootstrap',
     ],
     tags: ['HTML5', 'CSS3', 'JavaScript', 'jQuery', 'Bootstrap'],
-    github: 'https://github.com/jairoimm/Ricomida', // TODO: reemplazar con el link directo al repo
+    github: 'https://github.com/jairoimm/Ricomida',
     demo: null,
   },
 ];
@@ -114,7 +114,7 @@ export default function Projects() {
       <div className="eyebrow">Registro de proyectos</div>
       <h2 className="section-title reveal">Proyectos</h2>
       <p className="section-desc reveal">
-        De landing pages a sistemas completos con pagos y tests — en orden de complejidad.
+        De landing pages a pipelines de datos y sistemas complejos con pagos y tests — en orden de complejidad.
       </p>
 
       {PROJECTS.map((p) => (
